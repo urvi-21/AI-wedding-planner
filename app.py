@@ -2,7 +2,6 @@ import streamlit as st
 from agent import agent
 from tools import allocate_budget, generate_vendors, generate_timeline
 import re
-
 from utils import call_llm
 
 # ----------------------------
@@ -23,17 +22,14 @@ if "sections" not in st.session_state:
     st.session_state.sections = {}
 
 # ----------------------------
-# Custom CSS 🎀 (FINAL FIXED)
+# Custom CSS 🎀
 # ----------------------------
 st.markdown("""
 <style>
-
-/* Background */
 .stApp {
     background: linear-gradient(135deg, #fff0f5, #ffe4ec);
 }
 
-/* MAIN TITLE */
 h1 {
     color: #880E4F !important;
     text-align: center;
@@ -42,7 +38,6 @@ h1 {
     font-weight: bold;
 }
 
-/* SUBTITLE */
 .subtitle {
     text-align: center;
     color: #AD1457 !important;
@@ -50,18 +45,15 @@ h1 {
     margin-bottom: 20px;
 }
 
-/* ALL HEADINGS */
 h2, h3 {
     color: #880E4F !important;
     font-weight: bold;
 }
 
-/* Labels */
 label {
     color: #6A1B4D !important;
 }
 
-/* Buttons */
 .stButton>button {
     background: linear-gradient(90deg, #E75480, #C2185B);
     color: white;
@@ -70,7 +62,6 @@ label {
     padding: 10px 24px;
 }
 
-/* Cards */
 .card {
     background: white;
     padding: 20px;
@@ -80,34 +71,23 @@ label {
     box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
 }
 
-/* 🔥 FIX SPINNER TEXT */
-.stSpinner > div {
+/* 🔥 FIX TAB TEXT VISIBILITY */
+.stTabs [role="tab"] {
     color: #880E4F !important;
-    font-weight: 500;
-}
-
-/* 🔥 FIX TAB TEXT COLORS */
-button[data-baseweb="tab"] {
-    color: #6A1B4D !important;   /* normal tabs */
     font-weight: 600;
+    font-size: 16px;
 }
 
-/* ACTIVE TAB */
-button[aria-selected="true"] {
+/* Active tab */
+.stTabs [aria-selected="true"] {
     color: #C2185B !important;
     border-bottom: 3px solid #C2185B !important;
 }
 
-/* HOVER EFFECT */
-button[data-baseweb="tab"]:hover {
-    color: #880E4F !important;
+/* Hover effect */
+.stTabs [role="tab"]:hover {
+    color: #AD1457 !important;
 }
-
-/* Extra fallback */
-[data-testid="stStatusWidget"] {
-    color: #880E4F !important;
-}
-
 </style>
 """, unsafe_allow_html=True)
 
@@ -126,54 +106,105 @@ user_input = st.text_input(
 )
 
 # ----------------------------
-# CLEAN OUTPUT
+# Helpers
 # ----------------------------
 def clean_text(text):
     text = re.sub(r'\\boxed\{.*?\}', '', text)
     text = text.replace("\\", "")
     return text
 
+
+def format_vendors(text):
+    text = text.replace("VENUE:", "<h3>🏛️ Venue</h3>")
+    text = text.replace("CATERING:", "<h3>🍽️ Catering</h3>")
+    text = text.replace("DECOR:", "<h3>🎀 Decor</h3>")
+    text = text.replace("Name:", "<b>Name:</b>")
+    text = text.replace("Price Range:", "<b>Price:</b>")
+    text = text.replace("Reason:", "<b>Why:</b>")
+    text = text.replace("\n", "<br>")
+    return text
+
+
+def format_budget(budget_dict):
+    return "<br>".join([
+        f"💸 <b>{k.capitalize()}</b>: ₹{v:,}"
+        for k, v in budget_dict.items()
+    ])
+
+
+def parse_user_input(text):
+    text = text.lower()
+
+    # budget
+    budget_match = re.search(r'\d+', text)
+    budget = int(budget_match.group()) if budget_match else 800000
+
+    # city
+    cities = ["mumbai", "delhi", "jaipur", "raipur", "goa", "bangalore", "pune"]
+    city = "Mumbai"
+    for c in cities:
+        if c in text:
+            city = c.capitalize()
+
+    # preference
+    if "decor" in text:
+        preference = "decor"
+    elif "food" in text:
+        preference = "food"
+    elif "luxury" in text:
+        preference = "luxury"
+    else:
+        preference = "balanced"
+
+    return city, budget, preference
+
+
 # ----------------------------
-# GENERATE PLAN
+# Generate Plan
 # ----------------------------
 if st.button("✨ Generate Plan"):
 
     if not user_input.strip():
         st.warning("Enter something first!")
     else:
-        st.toast("💖 Creating your dream wedding...")
-
-        with st.spinner("Planning in progress..."):
+        with st.spinner("Planning your dream wedding... 💖"):
             try:
-                budget = allocate_budget(800000, "decor")
-                vendors = generate_vendors("Mumbai", 800000)
+                city, budget_val, preference = parse_user_input(user_input)
+
+                budget = allocate_budget(budget_val, preference)
+                vendors = generate_vendors(city, budget_val)
                 timeline = generate_timeline()
 
                 full_plan = f"""
 💰 Budget:
-{budget}
+{format_budget(budget)}
+
+<br><br>
 
 🏢 Vendors:
-{vendors}
+{format_vendors(vendors)}
+
+<br><br>
 
 📅 Timeline:
-{timeline}
+{"<br>".join(timeline)}
 """
 
-                full_plan = clean_text(str(full_plan))
+                full_plan = clean_text(full_plan)
 
                 st.session_state.plan = full_plan
                 st.session_state.sections = {
-                    "budget": str(budget),
-                    "vendors": str(vendors),
-                    "timeline": str(timeline)
+                    "budget": budget,
+                    "vendors": vendors,
+                    "timeline": timeline
                 }
 
             except Exception as e:
                 st.error(str(e))
 
+
 # ----------------------------
-# DISPLAY PLAN
+# Display
 # ----------------------------
 if st.session_state.plan:
 
@@ -185,19 +216,37 @@ if st.session_state.plan:
     ])
 
     with tab1:
-        st.markdown(f"<div class='card'>{st.session_state.sections.get('budget','')}</div>", unsafe_allow_html=True)
+        budget_data = st.session_state.sections.get("budget", {})
+        st.markdown(
+            f"<div class='card'>{format_budget(budget_data)}</div>",
+            unsafe_allow_html=True
+        )
 
     with tab2:
-        st.markdown(f"<div class='card'>{st.session_state.sections.get('vendors','')}</div>", unsafe_allow_html=True)
+        st.markdown("### 🏢 Recommended Vendors")
+        vendors_html = format_vendors(st.session_state.sections.get("vendors", ""))
+        st.markdown(
+            f"<div class='card'>{vendors_html}</div>",
+            unsafe_allow_html=True
+        )
 
     with tab3:
-        st.markdown(f"<div class='card'>{st.session_state.sections.get('timeline','')}</div>", unsafe_allow_html=True)
+        st.markdown("### 📅 Wedding Timeline")
+        timeline_html = "<br>".join(st.session_state.sections.get("timeline", []))
+        st.markdown(
+            f"<div class='card'>{timeline_html}</div>",
+            unsafe_allow_html=True
+        )
 
     with tab4:
-        st.markdown(f"<div class='card'>{st.session_state.plan}</div>", unsafe_allow_html=True)
+        st.markdown(
+            f"<div class='card'>{st.session_state.plan}</div>",
+            unsafe_allow_html=True
+        )
+
 
 # ----------------------------
-# 💬 REFINEMENT CHAT
+# Refinement
 # ----------------------------
 st.divider()
 st.subheader("💬 Refine Your Plan")
@@ -212,32 +261,28 @@ if st.button("Update Plan"):
     if not st.session_state.plan:
         st.warning("Generate a plan first!")
     else:
-        st.toast("✨ Updating your plan...")
-
-        with st.spinner("Refining your plan..."):
+        with st.spinner("Refining your plan... ✨"):
             try:
-                refined = call_llm(
-                    f"""
-                You are a wedding planner.
+                refined = call_llm(f"""
+You are a wedding planner.
 
-                Modify the following plan based on user request.
+Modify the following plan based on user request.
 
-                PLAN:
-                {st.session_state.plan}
+PLAN:
+{st.session_state.plan}
 
-                USER REQUEST:
-                {refine_input}
+USER REQUEST:
+{refine_input}
 
-                Return updated plan in same format:
-                1. Budget
-                2. Vendors
-                3. Timeline
+Return updated plan in same format:
+1. Budget
+2. Vendors
+3. Timeline
 
-                Keep it clean and concise. Do NOT use symbols like \\boxed.
-               """
-                )
+Keep it clean and structured.
+""")
 
-                st.session_state.plan = clean_text(str(refined))
+                st.session_state.plan = clean_text(refined)
 
             except Exception as e:
                 st.error(str(e))

@@ -1,16 +1,42 @@
-from openai import OpenAI
+from groq import Groq
 import os
 
-client = OpenAI(
-    base_url="https://openrouter.ai/api/v1",
-    api_key="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",
-)
+# Initialize client safely
+client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
-def call_llm(prompt):
-    response = client.chat.completions.create(
-        model="openrouter/free",
-        messages=[
-            {"role": "user", "content": prompt}
-        ],
-    )
-    return response.choices[0].message.content
+
+def call_llm(prompt: str) -> str:
+    try:
+        response = client.chat.completions.create(
+            model="llama-3.1-8b-instant",
+            messages=[
+                {
+                    "role": "system",
+                    "content": (
+                        "You are a precise and structured AI assistant. "
+                        "Always follow the requested format strictly. "
+                        "Avoid unnecessary explanations."
+                    )
+                },
+                {
+                    "role": "user",
+                    "content": prompt
+                }
+            ],
+            temperature=0.3,   # 🔥 more stable outputs
+            max_tokens=800
+        )
+
+        content = response.choices[0].message.content
+
+        # Safety check
+        if not content or not content.strip():
+            return "⚠️ Empty response from AI. Please try again."
+
+        return content.strip()
+
+    except Exception as e:
+        return (
+            "⚠️ AI service is temporarily unavailable.\n"
+            "Please try again in a moment."
+        )
