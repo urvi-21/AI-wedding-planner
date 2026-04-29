@@ -1,0 +1,866 @@
+{
+  "Jaipur": {
+    "venue": [
+      {
+        "name": "Chomu Palace",
+        "rating": 4.6,
+        "reviews": 1200,
+        "location": "Chomu, Jaipur",
+        "cost_range": [300000, 1000000]
+      },
+      {
+        "name": "Buena Vista Resort",
+        "rating": 4.7,
+        "reviews": 900,
+        "location": "Kukas, Jaipur",
+        "cost_range": [300000, 1000000]
+      },
+      {
+        "name": "The Leela Palace",
+        "rating": 4.8,
+        "reviews": 1500,
+        "location": "Kukas, Jaipur",
+        "cost_range": [300000, 1000000]
+      },
+      {
+        "name": "Samode Palace",
+        "rating": 4.7,
+        "reviews": 1100,
+        "location": "Samode, Jaipur",
+        "cost_range": [300000, 1000000]
+      },
+      {
+        "name": "Fairmont Jaipur",
+        "rating": 4.6,
+        "reviews": 4000,
+        "location": "Kukas, Jaipur",
+        "cost_range": [300000, 1000000]
+      },
+      {
+        "name": "Taj Devi Ratn",
+        "rating": 4.5,
+        "reviews": 2500,
+        "location": "Jaipur",
+        "cost_range": [150000, 400000]
+      },
+      {
+        "name": "Umaid Palace",
+        "rating": 4.4,
+        "reviews": 800,
+        "location": "Kukas, Jaipur",
+        "cost_range": [150000, 400000]
+      },
+      {
+        "name": "Marigold Hotel",
+        "rating": 4.5,
+        "reviews": 3145,
+        "location": "Tonk Road, Jaipur",
+        "cost_range": [150000, 400000]
+      },
+      {
+        "name": "Lohagarh Fort Resort",
+        "rating": 4.5,
+        "reviews": 3627,
+        "location": "Kukas, Jaipur",
+        "cost_range": [150000, 400000]
+      },
+      {
+        "name": "Rambagh Palace",
+        "rating": 4.7,
+        "reviews": 8727,
+        "location": "Jaipur",
+        "cost_range": [300000, 1000000]
+      }
+    ],
+
+    "catering": [
+      {
+        "name": "Shahi Caterers",
+        "rating": 4.9,
+        "reviews": 19,
+        "location": "Vaishali Nagar, Jaipur",
+        "cost_per_plate": [1200, 2500]
+      },
+      {
+        "name": "Wedding Shagun Caterers",
+        "rating": 4.8,
+        "reviews": 14,
+        "location": "Malviya Nagar, Jaipur",
+        "cost_per_plate": [1200, 2500]
+      },
+      {
+        "name": "K Fine Caterers",
+        "rating": 4.7,
+        "reviews": 12,
+        "location": "Raja Park, Jaipur",
+        "cost_per_plate": [1200, 2500]
+      },
+      {
+        "name": "Maharaja Caterers",
+        "rating": 4.6,
+        "reviews": 40,
+        "location": "Jaipur",
+        "cost_per_plate": [1200, 2500]
+      },
+      {
+        "name": "Gyanjee Caterers",
+        "rating": 4.5,
+        "reviews": 60,
+        "location": "Jaipur",
+        "cost_per_plate": [600, 1200]
+      },
+      {
+        "name": "Yash Caterers",
+        "rating": 4.4,
+        "reviews": 55,
+        "location": "C Scheme, Jaipur",
+        "cost_per_plate": [600, 1200]
+      },
+      {
+        "name": "Nidhi Sweets & Caterers",
+        "rating": 4.3,
+        "reviews": 50,
+        "location": "Pratap Nagar, Jaipur",
+        "cost_per_plate": [600, 1200]
+      },
+      {
+        "name": "Maharaja Corner Caterers",
+        "rating": 4.2,
+        "reviews": 45,
+        "location": "Jaipur",
+        "cost_per_plate": [300, 600]
+      }
+    ],
+
+    "decor": [
+      {
+        "name": "21 Turtles",
+        "rating": 4.9,
+        "reviews": 6,
+        "location": "Jaipur",
+        "cost_range": [150000, 500000]
+      },
+      {
+        "name": "Elegant Decor",
+        "rating": 4.6,
+        "reviews": 12,
+        "location": "Jaipur",
+        "cost_range": [150000, 500000]
+      },
+      {
+        "name": "Aayat Design Studio",
+        "rating": 4.8,
+        "reviews": 20,
+        "location": "Jaipur",
+        "cost_range": [150000, 500000]
+      },
+      {
+        "name": "Rehan Khan Events",
+        "rating": 4.7,
+        "reviews": 15,
+        "location": "Malviya Nagar, Jaipur",
+        "cost_range": [150000, 500000]
+      },
+      {
+        "name": "Golden Silk Decor",
+        "rating": 4.6,
+        "reviews": 30,
+        "location": "Jaipur",
+        "cost_range": [150000, 500000]
+      },
+      {
+        "name": "Panache Events",
+        "rating": 4.5,
+        "reviews": 40,
+        "location": "Jaipur",
+        "cost_range": [50000, 150000]
+      },
+      {
+        "name": "Divya Tent Events",
+        "rating": 4.5,
+        "reviews": 25,
+        "location": "Civil Lines, Jaipur",
+        "cost_range": [50000, 150000]
+      },
+      {
+        "name": "Jai Shree Krishna Events",
+        "rating": 5.0,
+        "reviews": 10,
+        "location": "Jaipur",
+        "cost_range": [150000, 500000]
+      },
+      {
+        "name": "Om Bajrang Decorators",
+        "rating": 4.4,
+        "reviews": 22,
+        "location": "Civil Lines, Jaipur",
+        "cost_range": [50000, 150000]
+      }
+    ]
+  },
+
+  
+  "Mumbai": {
+    "venue": [
+      {
+        "name": "Novotel Juhu Beach",
+        "rating": 4.4,
+        "reviews": 17000,
+        "location": "Juhu Beach, Mumbai",
+        "cost_range": [150000, 400000]
+      },
+      {
+        "name": "The Leela Mumbai",
+        "rating": 4.7,
+        "reviews": 21000,
+        "location": "Andheri East, Mumbai",
+        "cost_range": [300000, 1000000]
+      },
+      {
+        "name": "St. Regis Mumbai",
+        "rating": 4.6,
+        "reviews": 21000,
+        "location": "Worli, Mumbai",
+        "cost_range": [300000, 1000000]
+      },
+      {
+        "name": "Taj Mahal Palace",
+        "rating": 4.7,
+        "reviews": 39000,
+        "location": "Colaba, Mumbai",
+        "cost_range": [300000, 1000000]
+      },
+      {
+        "name": "JW Marriott Juhu",
+        "rating": 4.6,
+        "reviews": 47000,
+        "location": "Juhu, Mumbai",
+        "cost_range": [300000, 1000000]
+      },
+      {
+        "name": "Juhu Club Millennium",
+        "rating": 4.4,
+        "reviews": 8500,
+        "location": "Juhu, Mumbai",
+        "cost_range": [150000, 400000]
+      },
+      {
+        "name": "Taj Lands End",
+        "rating": 4.6,
+        "reviews": 35000,
+        "location": "Bandra West, Mumbai",
+        "cost_range": [300000, 1000000]
+      },
+      {
+        "name": "The Oberoi Mumbai",
+        "rating": 4.7,
+        "reviews": 17000,
+        "location": "Nariman Point, Mumbai",
+        "cost_range": [300000, 1000000]
+      },
+      {
+        "name": "Jade Luxury Banquets",
+        "rating": 4.5,
+        "reviews": 1200,
+        "location": "Worli, Mumbai",
+        "cost_range": [150000, 400000]
+      },
+      {
+        "name": "Westin Powai Lake",
+        "rating": 4.5,
+        "reviews": 14000,
+        "location": "Powai, Mumbai",
+        "cost_range": [150000, 400000]
+      }
+    ],
+
+    "catering": [
+      {
+        "name": "Kamath Gourmet Caterers",
+        "rating": 4.7,
+        "reviews": 50,
+        "location": "Byculla, Mumbai",
+        "cost_per_plate": [1200, 2500]
+      },
+      {
+        "name": "K Caterers",
+        "rating": 4.6,
+        "reviews": 40,
+        "location": "Malabar Hill, Mumbai",
+        "cost_per_plate": [1200, 2500]
+      },
+      {
+        "name": "Prasad Caterers",
+        "rating": 4.5,
+        "reviews": 60,
+        "location": "Ghatkopar, Mumbai",
+        "cost_per_plate": [600, 1200]
+      },
+      {
+        "name": "Gaurav Caterers",
+        "rating": 4.6,
+        "reviews": 70,
+        "location": "Kharghar, Mumbai",
+        "cost_per_plate": [1200, 2500]
+      },
+      {
+        "name": "Ramal Caterers",
+        "rating": 4.4,
+        "reviews": 55,
+        "location": "Airoli, Mumbai",
+        "cost_per_plate": [600, 1200]
+      },
+      {
+        "name": "Brijwasi Caterers",
+        "rating": 4.6,
+        "reviews": 80,
+        "location": "Thane West",
+        "cost_per_plate": [1200, 2500]
+      },
+      {
+        "name": "Monish Group Caterers",
+        "rating": 4.5,
+        "reviews": 65,
+        "location": "Byculla, Mumbai",
+        "cost_per_plate": [600, 1200]
+      },
+      {
+        "name": "Green Leaf Caterers",
+        "rating": 4.4,
+        "reviews": 90,
+        "location": "Mumbai",
+        "cost_per_plate": [600, 1200]
+      },
+      {
+        "name": "Mini Punjab Catering",
+        "rating": 4.5,
+        "reviews": 120,
+        "location": "Mumbai",
+        "cost_per_plate": [600, 1200]
+      },
+      {
+        "name": "Kritika Caterers",
+        "rating": 4.6,
+        "reviews": 45,
+        "location": "Mumbai",
+        "cost_per_plate": [1200, 2500]
+      }
+    ],
+
+    "decor": [
+      {
+        "name": "Shree Siddhi Florals",
+        "rating": 4.9,
+        "reviews": 3,
+        "location": "Dadar, Mumbai",
+        "cost_range": [150000, 500000]
+      },
+      {
+        "name": "Nityananda Flowers",
+        "rating": 5.0,
+        "reviews": 4,
+        "location": "Mumbai",
+        "cost_range": [150000, 500000]
+      },
+      {
+        "name": "Suraj Decorators",
+        "rating": 4.5,
+        "reviews": 0,
+        "location": "Chembur, Mumbai",
+        "cost_range": [50000, 150000]
+      },
+      {
+        "name": "Uours Decorator",
+        "rating": 4.4,
+        "reviews": 25,
+        "location": "Mumbai",
+        "cost_range": [50000, 150000]
+      },
+      {
+        "name": "Jain Decorators",
+        "rating": 4.6,
+        "reviews": 75,
+        "location": "Mumbai",
+        "cost_range": [150000, 500000]
+      },
+      {
+        "name": "Archi Decorators",
+        "rating": 4.3,
+        "reviews": 30,
+        "location": "Mumbai",
+        "cost_range": [50000, 150000]
+      },
+      {
+        "name": "Creator Entertainers",
+        "rating": 4.3,
+        "reviews": 28,
+        "location": "Mumbai",
+        "cost_range": [50000, 150000]
+      },
+      {
+        "name": "Dome Occasions",
+        "rating": 4.7,
+        "reviews": 40,
+        "location": "Mumbai",
+        "cost_range": [150000, 500000]
+      },
+      {
+        "name": "Mokshiva Wedding & Events",
+        "rating": 4.7,
+        "reviews": 35,
+        "location": "Mumbai",
+        "cost_range": [150000, 500000]
+      },
+      {
+        "name": "Garib Nawaz Florist",
+        "rating": 4.4,
+        "reviews": 10,
+        "location": "Mumbai",
+        "cost_range": [50000, 150000]
+      }
+    ]
+  },
+  
+  "Udaipur": {
+    "venue": [
+      {
+        "name": "The Leela Palace Udaipur",
+        "rating": 4.8,
+        "reviews": 2100,
+        "location": "Lake Pichola, Udaipur",
+        "cost_range": [300000, 1000000]
+      },
+      {
+        "name": "Taj Lake Palace",
+        "rating": 4.8,
+        "reviews": 4200,
+        "location": "Lake Pichola, Udaipur",
+        "cost_range": [300000, 1000000]
+      },
+      {
+        "name": "Bhairavgarh Palace",
+        "rating": 4.6,
+        "reviews": 1500,
+        "location": "Aravalli Hills, Udaipur",
+        "cost_range": [300000, 1000000]
+      },
+      {
+        "name": "Radisson Blu Udaipur",
+        "rating": 4.5,
+        "reviews": 3800,
+        "location": "Fateh Sagar Lake, Udaipur",
+        "cost_range": [150000, 400000]
+      },
+      {
+        "name": "Lalit Laxmi Vilas Palace",
+        "rating": 4.5,
+        "reviews": 2600,
+        "location": "Fateh Sagar Road, Udaipur",
+        "cost_range": [150000, 400000]
+      },
+      {
+        "name": "Fatehgarh Palace",
+        "rating": 4.6,
+        "reviews": 1900,
+        "location": "Sisarma, Udaipur",
+        "cost_range": [300000, 1000000]
+      },
+      {
+        "name": "Trident Udaipur",
+        "rating": 4.7,
+        "reviews": 3100,
+        "location": "Haridasji Ki Magri, Udaipur",
+        "cost_range": [300000, 1000000]
+      },
+      {
+        "name": "Ananta Resort",
+        "rating": 4.4,
+        "reviews": 3400,
+        "location": "Badi Village, Udaipur",
+        "cost_range": [150000, 400000]
+      },
+      {
+        "name": "Raffles Udaipur",
+        "rating": 4.7,
+        "reviews": 800,
+        "location": "Udai Sagar Lake, Udaipur",
+        "cost_range": [300000, 1000000]
+      },
+      {
+        "name": "Marutinandan Resort",
+        "rating": 4.3,
+        "reviews": 600,
+        "location": "Udaipur",
+        "cost_range": [150000, 400000]
+      }
+    ],
+
+    "catering": [
+      {
+        "name": "Yash Caterers",
+        "rating": 4.5,
+        "reviews": 10,
+        "location": "Udaipur",
+        "cost_per_plate": [600, 1200]
+      },
+      {
+        "name": "Bhupendra Catering Services",
+        "rating": 4.5,
+        "reviews": 10,
+        "location": "Udaipur",
+        "cost_per_plate": [600, 1200]
+      },
+      {
+        "name": "Parth Caterers",
+        "rating": 4.4,
+        "reviews": 20,
+        "location": "Udaipur",
+        "cost_per_plate": [600, 1200]
+      },
+      {
+        "name": "Mayank Caterers",
+        "rating": 4.4,
+        "reviews": 25,
+        "location": "Udaipur",
+        "cost_per_plate": [600, 1200]
+      },
+      {
+        "name": "Shreenath Caterers",
+        "rating": 4.3,
+        "reviews": 18,
+        "location": "Udaipur",
+        "cost_per_plate": [600, 1200]
+      },
+      {
+        "name": "Neha Caterers & Events",
+        "rating": 4.6,
+        "reviews": 30,
+        "location": "Udaipur City",
+        "cost_per_plate": [1200, 2500]
+      },
+      {
+        "name": "Nandani Caterers",
+        "rating": 4.7,
+        "reviews": 40,
+        "location": "Udaipur City",
+        "cost_per_plate": [1200, 2500]
+      },
+      {
+        "name": "Shagun Caterers",
+        "rating": 4.6,
+        "reviews": 35,
+        "location": "Bujra, Udaipur",
+        "cost_per_plate": [1200, 2500]
+      },
+      {
+        "name": "Khandelwal Caterers",
+        "rating": 4.4,
+        "reviews": 22,
+        "location": "Udaipur",
+        "cost_per_plate": [600, 1200]
+      },
+      {
+        "name": "Rajlaxmi Caterers",
+        "rating": 4.3,
+        "reviews": 15,
+        "location": "Udaipur",
+        "cost_per_plate": [600, 1200]
+      }
+    ],
+
+    "decor": [
+      {
+        "name": "Khamma Ghani Weddings",
+        "rating": 4.7,
+        "reviews": 25,
+        "location": "Udaipur City",
+        "cost_range": [150000, 500000]
+      },
+      {
+        "name": "Weddings By Palak",
+        "rating": 4.8,
+        "reviews": 30,
+        "location": "Udaipur",
+        "cost_range": [150000, 500000]
+      },
+      {
+        "name": "Wedding By Umesh",
+        "rating": 4.6,
+        "reviews": 20,
+        "location": "Udaipur",
+        "cost_range": [150000, 500000]
+      },
+      {
+        "name": "Weddings By Neeraj Kamra",
+        "rating": 4.9,
+        "reviews": 50,
+        "location": "Udaipur",
+        "cost_range": [150000, 500000]
+      },
+      {
+        "name": "Decor By Pranchit",
+        "rating": 4.7,
+        "reviews": 12,
+        "location": "Sector 4, Udaipur",
+        "cost_range": [150000, 500000]
+      },
+      {
+        "name": "Narayan Events & Tents",
+        "rating": 4.5,
+        "reviews": 6,
+        "location": "Hiran Magri, Udaipur",
+        "cost_range": [50000, 150000]
+      },
+      {
+        "name": "Bhakti Events",
+        "rating": 4.4,
+        "reviews": 10,
+        "location": "Udaipur",
+        "cost_range": [50000, 150000]
+      },
+      {
+        "name": "The Backdrop",
+        "rating": 4.8,
+        "reviews": 15,
+        "location": "Udaipur",
+        "cost_range": [150000, 500000]
+      },
+      {
+        "name": "Shubhmayam Weddings",
+        "rating": 4.6,
+        "reviews": 18,
+        "location": "Udaipur",
+        "cost_range": [150000, 500000]
+      },
+      {
+        "name": "Wedding By Ishwar",
+        "rating": 4.7,
+        "reviews": 22,
+        "location": "Udaipur",
+        "cost_range": [150000, 500000]
+      }
+    ]
+  },
+  
+  "Delhi": {
+    "venue": [
+      {
+        "name": "Tivoli Garden Resort",
+        "rating": 4.6,
+        "reviews": 500,
+        "location": "Chattarpur, Delhi",
+        "cost_range": [300000, 1000000]
+      },
+      {
+        "name": "The Leela Palace New Delhi",
+        "rating": 4.8,
+        "reviews": 4200,
+        "location": "Chanakyapuri, Delhi",
+        "cost_range": [300000, 1000000]
+      },
+      {
+        "name": "Vivanta Dwarka",
+        "rating": 4.5,
+        "reviews": 7600,
+        "location": "Dwarka, Delhi",
+        "cost_range": [150000, 400000]
+      },
+      {
+        "name": "Four Points by Sheraton Delhi",
+        "rating": 4.4,
+        "reviews": 8400,
+        "location": "NH8, Delhi",
+        "cost_range": [150000, 400000]
+      },
+      {
+        "name": "Gracious Banquets",
+        "rating": 4.5,
+        "reviews": 300,
+        "location": "West Delhi",
+        "cost_range": [150000, 400000]
+      },
+      {
+        "name": "Myst Zora",
+        "rating": 4.6,
+        "reviews": 250,
+        "location": "South Delhi",
+        "cost_range": [300000, 1000000]
+      },
+      {
+        "name": "Watercrest Venue Luxe",
+        "rating": 4.6,
+        "reviews": 280,
+        "location": "South Delhi",
+        "cost_range": [300000, 1000000]
+      },
+      {
+        "name": "Araya Bagh",
+        "rating": 4.5,
+        "reviews": 350,
+        "location": "Delhi",
+        "cost_range": [150000, 400000]
+      },
+      {
+        "name": "Yadu Greens",
+        "rating": 4.4,
+        "reviews": 1900,
+        "location": "GT Karnal Road, Delhi",
+        "cost_range": [150000, 400000]
+      },
+      {
+        "name": "Tivoli Garden Resort GT Karnal",
+        "rating": 4.4,
+        "reviews": 2100,
+        "location": "GT Karnal Road, Delhi",
+        "cost_range": [150000, 400000]
+      }
+    ],
+
+    "catering": [
+      {
+        "name": "Moets Catering",
+        "rating": 4.7,
+        "reviews": 120,
+        "location": "Delhi NCR",
+        "cost_per_plate": [1200, 2500]
+      },
+      {
+        "name": "Seven Seas Catering",
+        "rating": 4.6,
+        "reviews": 95,
+        "location": "Delhi NCR",
+        "cost_per_plate": [1200, 2500]
+      },
+      {
+        "name": "Silver Feast Caterers",
+        "rating": 4.5,
+        "reviews": 80,
+        "location": "Naraina, Delhi",
+        "cost_per_plate": [600, 1200]
+      },
+      {
+        "name": "Shankar Caterers",
+        "rating": 4.5,
+        "reviews": 70,
+        "location": "Kamla Nagar, Delhi",
+        "cost_per_plate": [600, 1200]
+      },
+      {
+        "name": "B S Marwah Caterers",
+        "rating": 4.4,
+        "reviews": 65,
+        "location": "Rajouri Garden, Delhi",
+        "cost_per_plate": [600, 1200]
+      },
+      {
+        "name": "Shivam Food Caterers",
+        "rating": 4.4,
+        "reviews": 60,
+        "location": "Mayapuri, Delhi",
+        "cost_per_plate": [600, 1200]
+      },
+      {
+        "name": "Zayca Caterers",
+        "rating": 4.3,
+        "reviews": 55,
+        "location": "Paschim Vihar, Delhi",
+        "cost_per_plate": [600, 1200]
+      },
+      {
+        "name": "RC Caterers",
+        "rating": 4.4,
+        "reviews": 50,
+        "location": "Kamla Nagar, Delhi",
+        "cost_per_plate": [600, 1200]
+      },
+      {
+        "name": "Goswami Caterers",
+        "rating": 4.6,
+        "reviews": 85,
+        "location": "Connaught Place, Delhi",
+        "cost_per_plate": [1200, 2500]
+      },
+      {
+        "name": "Baraat Catering",
+        "rating": 4.7,
+        "reviews": 40,
+        "location": "Delhi NCR",
+        "cost_per_plate": [1200, 2500]
+      }
+    ],
+
+    "decor": [
+      {
+        "name": "GFX Events",
+        "rating": 4.7,
+        "reviews": 155,
+        "location": "East of Kailash, Delhi",
+        "cost_range": [150000, 500000]
+      },
+      {
+        "name": "Gulshan Flower Decor",
+        "rating": 4.7,
+        "reviews": 109,
+        "location": "Pitampura, Delhi",
+        "cost_range": [150000, 500000]
+      },
+      {
+        "name": "Fusion Decor",
+        "rating": 4.8,
+        "reviews": 90,
+        "location": "Delhi NCR",
+        "cost_range": [150000, 500000]
+      },
+      {
+        "name": "Platinum Panache",
+        "rating": 4.6,
+        "reviews": 75,
+        "location": "Delhi NCR",
+        "cost_range": [150000, 500000]
+      },
+      {
+        "name": "Bittu Flower Decor",
+        "rating": 4.6,
+        "reviews": 80,
+        "location": "Delhi NCR",
+        "cost_range": [150000, 500000]
+      },
+      {
+        "name": "Sai Flower Decor",
+        "rating": 4.2,
+        "reviews": 52,
+        "location": "Lodhi Road, Delhi",
+        "cost_range": [20000, 50000]
+      },
+      {
+        "name": "Shri Balaji Tent & Decor",
+        "rating": 3.7,
+        "reviews": 3,
+        "location": "Anand Parbat, Delhi",
+        "cost_range": [20000, 50000]
+      },
+      {
+        "name": "Roseflower Decor",
+        "rating": 3.9,
+        "reviews": 6,
+        "location": "Delhi",
+        "cost_range": [20000, 50000]
+      },
+      {
+        "name": "Zaidi Flower Decoration",
+        "rating": 4.3,
+        "reviews": 30,
+        "location": "Delhi",
+        "cost_range": [50000, 150000]
+      },
+      {
+        "name": "Fiona Decor",
+        "rating": 4.6,
+        "reviews": 60,
+        "location": "Janakpuri, Delhi",
+        "cost_range": [150000, 500000]
+      }
+    ]
+  }
+
+}
